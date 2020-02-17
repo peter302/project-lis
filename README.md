@@ -24,3 +24,28 @@ If user has no account, they click on `sign up` | User signs up | User is redire
 | Homepage loads | Click `upload image` icon | User's redirected to a page where they can upload an image |
 | Homepage loads | Click `settings` icon | A modal appears where one can change their password or logout |
 | Homepage loads | User inputs in the search form and presses enter | Searched results show |
+
+
+## Setup/Installation requirements
+1.Clone or download and unzip the repository from github,https://github.com/costamay/Awwards.git
+
+2. Activate virtual environment using python3.6 as default handler virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
+
+3. Install dependancies that will create an environment for the app to run pip3 install -r requirements.txt
+4. Create the Database
+- psql
+- CREATE DATABASE instacopy;
+
+4. Create .env file and paste paste the following filling where appropriate:
+
+-SECRET_KEY = '<Secret_key>'
+-DBNAME = 'instacopy'
+-USER = '<Username>'
+-PASSWORD = '<password>'
+-DEBUG = True
+5. Run initial Migration
+-python3.6 manage.py makemigrations instagram
+-python3.6 manage.py migrate
+6. Run the app
+-python3.6 manage.py runserver
+-Open terminal on localhost:8000
