@@ -13,3 +13,15 @@ def index(request):
     date =dt.date.today()
     posts = Post.objects.all()
     return render(request, 'projects/index.html', {"date":date, "posts":posts })
+
+@login_required(login_url='/accounts/login/?next=/')
+def profile(request):
+    current_user = request.user
+    # if user_id ==None:
+    #     user_id=request.user.id
+    # current_user = User.objects.get(id = user_id)
+    # user=current_user
+    # profile = Profile.objects.filter(user=current_user)
+    profile = Profile.objects.filter(user=current_user).first()
+    posts = request.user.post_set.all()
+    
