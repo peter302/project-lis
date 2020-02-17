@@ -10,3 +10,12 @@ class Profile(models.Model):
     profile_picture =models.ImageField(upload_to= 'profiles/', blank=True, default="profiles/a.jpg")
     bio = models.CharField(max_length=100, default='Welcome to you bio')
     contact = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.bio
+
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete()
