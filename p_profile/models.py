@@ -20,7 +20,7 @@ class Profile(models.Model):
     def delete_profile(self):
         self.delete()
 
-        @classmethod
+    @classmethod
     def update_bio(cls,id, bio):
         update_profile = cls.objects.filter(id = id).update(bio = bio)
         return update_profile
