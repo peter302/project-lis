@@ -62,4 +62,18 @@ def vote(request,post_id):
         post = Post.objects.get(id = post_id)
     except DoesNotExist:
         raise Http404()
-    return render(request,"projects/vote.html", {"post":post})            
+    return render(request,"projects/vote.html", {"post":post})
+
+
+def search_results(request):
+
+    if 'post' in request.GET and request.GET["post"]:
+        search_term = request.GET.get("post")
+        searched_posts = Post.search(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'projects/search.html',{"message":message,"posts": searched_posts})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'projects/search.html',{"message":message})                
