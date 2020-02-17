@@ -55,3 +55,7 @@ class Post(models.Model):
 
     def delete_post(self):
         self.delete()
+    @classmethod
+    def search(cls,searchterm):
+        search = Post.objects.filter(Q(title__icontains=searchterm)|Q(description__icontains=searchterm)|Q(country__icontains=searchterm))
+        return search
