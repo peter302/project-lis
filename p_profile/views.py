@@ -38,4 +38,20 @@ def updateprofile(request):
             return redirect('profile')
     else:
         form = ProfileForm()
-    return render(request, 'projects/profile_update.html',{"form":form })        
+    return render(request, 'projects/profile_update.html',{"form":form })
+
+
+@login_required(login_url='/accounts/login/?next=/')
+def new_post(request):
+        current_user = request.user
+        if request.method == 'POST':
+                form = PostForm(request.POST, request.FILES)
+                if form.is_valid():
+                        add=form.save(commit=False)
+                        add.user = current_user
+                        add.save()
+                return redirect('index')
+        else:
+                form = PostForm()
+                return render(request,'projects/new_post.html', {"form":form})
+            
