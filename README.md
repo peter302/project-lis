@@ -49,3 +49,10 @@ If user has no account, they click on `sign up` | User signs up | User is redire
 6. Run the app
 -python3.6 manage.py runserver
 -Open terminal on localhost:8000
+
+## Technologies Used
+* PYTHON 3.6
+* DJANGO FRAMEWORK
+* BOOTSTRAP
+* CSS
+* POSTGRESS
