@@ -62,3 +62,6 @@ If user has no account, they click on `sign up` | User signs up | User is redire
 * DJANGO FRAMEWORK
 * PYTHON VIRTULENV
 * POSTGRESS
+
+## Support and contact details
+contact me @ petermbaik@gmail.com
