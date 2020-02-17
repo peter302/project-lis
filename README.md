@@ -56,3 +56,9 @@ If user has no account, they click on `sign up` | User signs up | User is redire
 * BOOTSTRAP
 * CSS
 * POSTGRESS
+
+## Prerequisite
+* PYTHON 3.6
+* DJANGO FRAMEWORK
+* PYTHON VIRTULENV
+* POSTGRESS
