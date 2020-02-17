@@ -65,3 +65,8 @@ If user has no account, they click on `sign up` | User signs up | User is redire
 
 ## Support and contact details
 contact me @ petermbaik@gmail.com
+
+### License
+The project is under[MIT license](/blob/master/LICENSE)
+Copyright &copy; 2019.All rigths reserved
+  
