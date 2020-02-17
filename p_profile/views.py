@@ -76,4 +76,11 @@ def search_results(request):
 
     else:
         message = "You haven't searched for any term"
-        return render(request, 'projects/search.html',{"message":message})                
+        return render(request, 'projects/search.html',{"message":message})
+
+class PostList(APIView):
+    def get(self, request, format=None):
+        all_post = Post.objects.all()
+        serializers = PostSerializer(all_post, many=True)
+        return Response(serializers.data)
+                       
