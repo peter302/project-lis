@@ -31,4 +31,14 @@ class Profile(models.Model):
         return profile
     @classmethod
     def search_user(cls,user):
-        return cls.objects.filter(user__username__icontains=user).all()    
+        return cls.objects.filter(user__username__icontains=user).all()
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='images/', default='')
+    description = models.CharField(max_length=200)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_posted = models.DateTimeField(auto_now=True)
+    link = models.URLField(max_length=250)
+    country = models.CharField(max_length=50)            
