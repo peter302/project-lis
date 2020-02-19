@@ -27,7 +27,7 @@ If user has no account, they click on `sign up` | User signs up | User is redire
 
 
 ## Setup/Installation requirements
-1.Clone or download and unzip the repository from github,https://github.com/costamay/Awwards.git
+1.Clone or download and unzip the repository from github,https://github.com/peter302/project-lis.git
 
 2. Activate virtual environment using python3.6 as default handler virtualenv -p /usr/bin/python3.6 venv && source venv/bin/activate
 
